@@ -25,7 +25,7 @@ const Mission = () => {
           <h2 className="text-3xl font-bold text-white">Our Mission</h2>
           <p className="text-lg text-gray-300 leading-relaxed">
             We strive to deliver superior risk-adjusted returns through a combination of current
-            income and capital appreciation. Our team's extensive experience and deep relationships
+            income and capital appreciation. Our team&apos;s extensive experience and deep relationships
             in the commercial real estate sector allow us to identify and capitalize on unique
             investment opportunities.
           </p>
