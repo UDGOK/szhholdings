@@ -187,7 +187,6 @@ const Footer = () => {
         <div className="relative mt-16 pt-8">
           <div className="absolute top-0 left-4 right-4">
             <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-purple-500/0 blur-sm" />
           </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">

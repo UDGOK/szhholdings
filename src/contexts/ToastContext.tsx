@@ -33,12 +33,13 @@ interface Toast {
 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
-  const [counter, setCounter] = useState(0);
 
   const showToast = useCallback((message: string, options?: ToastOptions) => {
-    setCounter((prev) => prev + 1);
-    setToasts((prev) => [...prev, { id: counter, message, options }]);
-  }, [counter]);
+    setToasts((prev) => {
+      const newId = prev.length > 0 ? Math.max(...prev.map(t => t.id)) + 1 : 0;
+      return [...prev, { id: newId, message, options }];
+    });
+  }, []);
 
   const removeToast = useCallback((id: number) => {
     setToasts((prev) => prev.filter((toast) => toast.id !== id));

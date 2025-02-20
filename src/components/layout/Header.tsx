@@ -68,6 +68,7 @@ const Header = () => {
   const lastScrollY = useRef(0);
   const [isHidden, setIsHidden] = useState(false);
   const toast = useToastHelpers();
+  const welcomeShownRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,14 +93,17 @@ const Header = () => {
 
   // Show welcome toast on mount
   useEffect(() => {
-    toast.info('Welcome to Ares Commercial Real Estate', {
-      duration: 5000,
-      icon: <BellIcon className="h-5 w-5" />,
-      action: {
-        label: 'Learn More',
-        onClick: () => window.location.href = '/about',
-      },
-    });
+    if (!welcomeShownRef.current) {
+      welcomeShownRef.current = true;
+      toast.info('Welcome to Ares Commercial Real Estate', {
+        duration: 5000,
+        icon: <BellIcon className="h-5 w-5" />,
+        action: {
+          label: 'Learn More',
+          onClick: () => window.location.href = '/about',
+        },
+      });
+    }
   }, [toast]);
 
   const handleNewsClick = () => {
