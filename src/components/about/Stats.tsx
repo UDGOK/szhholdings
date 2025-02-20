@@ -18,9 +18,10 @@ const Stats = () => {
   return (
     <section
       ref={ref}
-      className="relative py-24 bg-white"
+      className="relative py-24 bg-gray-900"
     >
-      <div className="container px-4">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="container relative px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -33,12 +34,12 @@ const Stats = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="text-center p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-xl shadow-gray-200/50"
+              className="text-center p-8 rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl shadow-gray-900/20 border border-gray-700"
             >
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {stat.number}
               </div>
-              <div className="mt-2 text-gray-600">{stat.label}</div>
+              <div className="mt-2 text-gray-400">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
