@@ -7,9 +7,47 @@
   --background-rgb: 255, 255, 255;
 }
 
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 17, 24, 39;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+}
+
+/* Dark mode overrides */
+.dark .card {
+  @apply bg-gray-800;
+}
+
+.dark .nav-dropdown {
+  @apply bg-gray-800/90 border-gray-700/20;
+}
+
+.dark .nav-dropdown-item {
+  @apply text-gray-300 hover:text-white;
+}
+
+.dark .nav-dropdown-item::before {
+  @apply bg-gray-700;
+}
+
+.dark .btn-secondary {
+  @apply bg-gray-800 text-white hover:bg-gray-700;
+}
+
+.dark ::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-600;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
 }
 
 /* Custom Scrollbar */

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 import { Bars3Icon, BellIcon } from '@heroicons/react/24/outline';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
+import ThemeToggle from '../ui/ThemeToggle';
 import Logo from './Logo';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
@@ -130,11 +131,14 @@ const Header = () => {
         }}
         className={cn(
           'fixed w-full z-50 transition-colors duration-300',
-          isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-md' : 'bg-transparent'
+          isScrolled
+            ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md'
+            : 'bg-transparent'
         )}
       >
         {/* Top bar with notifications */}
         <div className="bg-primary/90 backdrop-blur-sm h-8 flex justify-end items-center gap-4 px-4 sm:px-6 lg:px-8">
+          <ThemeToggle />
           <Tooltip content="View latest updates">
             <button
               onClick={handleNewsClick}
