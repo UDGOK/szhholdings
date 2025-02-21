@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 import { Bars3Icon, BellIcon } from '@heroicons/react/24/outline';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
@@ -45,20 +44,25 @@ const navItems = [
 
 const investmentItems = [
   { 
-    name: 'Investment Strategy',
-    href: '/investments/strategy',
-    tooltip: 'Understand our investment approach'
-  },
-  { 
-    name: 'Portfolio',
-    href: '/investments/portfolio',
-    tooltip: 'View our current investments',
+    name: 'Stocks & ETFs',
+    href: '/investments/stocks-etfs',
+    tooltip: 'Explore our stock and ETF investment options',
     badge: { type: 'hot' as const }
   },
   { 
-    name: 'Case Studies',
-    href: '/investments/case-studies',
-    tooltip: 'Detailed analysis of our successful investments',
+    name: 'Real Estate',
+    href: '/investments/real-estate',
+    tooltip: 'Discover real estate investment opportunities',
+  },
+  { 
+    name: 'Fixed Income',
+    href: '/investments/fixed-income',
+    tooltip: 'Explore bonds and fixed-income securities',
+  },
+  { 
+    name: 'Alternative Investments',
+    href: '/investments/alternative',
+    tooltip: 'Discover unique investment opportunities',
     badge: { type: 'beta' as const }
   },
 ];
@@ -66,37 +70,23 @@ const investmentItems = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const lastScrollY = useRef(0);
-  const [isHidden, setIsHidden] = useState(false);
   const toast = useToastHelpers();
   const welcomeShownRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Update header background
       setIsScrolled(currentScrollY > 50);
-      
-      // Hide/show header based on scroll direction
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
-      
-      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Show welcome toast on mount
   useEffect(() => {
     if (!welcomeShownRef.current) {
       welcomeShownRef.current = true;
-      toast.info('Welcome to Ares Commercial Real Estate', {
+      toast.info('Welcome to SZH Holdings', {
         duration: 5000,
         icon: <BellIcon className="h-5 w-5" />,
         action: {
@@ -119,18 +109,10 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
-        initial={false}
-        animate={{
-          y: isHidden ? -100 : 0,
-          opacity: isHidden ? 0 : 1,
-        }}
-        transition={{
-          duration: 0.3,
-          ease: [0.4, 0, 0.2, 1],
-        }}
+      <div className="fixed inset-x-0 top-0 h-[7rem] bg-gradient-to-b from-gray-900/80 to-transparent pointer-events-none z-40" />
+      <header
         className={cn(
-          'fixed w-full z-50 transition-colors duration-300',
+          'fixed w-full z-50 transition-all duration-300',
           isScrolled
             ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md'
             : 'bg-transparent'
@@ -149,7 +131,7 @@ const Header = () => {
           </Tooltip>
           <Tooltip content="Send us an email">
             <Link 
-              href="mailto:contact@arescre.com"
+              href="mailto:contact@szhholdings.com"
               className="text-white hover:text-gray-300 transition-colors duration-200"
             >
               <EnvelopeIcon className="h-4 w-4" />
@@ -183,7 +165,7 @@ const Header = () => {
             </button>
           </div>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Mobile Navigation Drawer */}
       <MobileNav

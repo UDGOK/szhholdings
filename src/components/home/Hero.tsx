@@ -102,11 +102,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl hero-text-gradient"
           >
-            Ares Commercial
-            <br />
-            Real Estate
-            <br />
-            Corporation
+            SZH Holdings
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -114,8 +110,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl mx-auto lg:mx-0"
           >
-            Focused on directly originating and managing a diversified portfolio of
-            commercial real estate debt-related investments
+            A leading investment firm focused on managing a diversified portfolio of
+            strategic investments across multiple sectors
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

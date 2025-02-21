@@ -46,7 +46,7 @@ const AboutHero = () => {
             transition={{ duration: 0.8 }}
             className="relative z-10 text-5xl md:text-6xl font-bold text-white"
           >
-            Transforming Real Estate Investment
+            Transforming Investment Management
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,8 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative z-10 text-xl text-gray-300 leading-relaxed"
           >
-            At Ares Commercial Real Estate, we combine deep industry expertise with innovative
-            financial solutions to create lasting value for our investors and partners.
+            At SZH Holdings, we combine deep industry expertise with innovative
+            investment strategies to create lasting value for our investors and partners.
           </motion.p>
         </motion.div>
       </div>

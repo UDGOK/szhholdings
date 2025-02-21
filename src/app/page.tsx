@@ -19,16 +19,16 @@ export default function Home() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-              A Leading Commercial Real Estate Lender
+              A Leading Investment Management Firm
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Ares Commercial Real Estate Corporation is a specialty finance company primarily engaged in 
-              originating and investing in commercial real estate loans and related investments.
+              SZH Holdings is a leading investment management firm focused on delivering superior returns
+              through strategic investments across multiple sectors and asset classes.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4 text-blue-600">Experience</h3>
-                <p className="text-gray-600">Deep expertise in commercial real estate lending</p>
+                <p className="text-gray-600">Deep expertise in investment management</p>
               </div>
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4 text-blue-600">Portfolio</h3>
@@ -60,7 +60,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-blue-400">Direct Origination</h3>
                 <p className="text-gray-300">
-                  We focus on directly originating floating rate mortgage loans secured by commercial real estate properties.
+                  We focus on identifying and executing strategic investment opportunities across multiple sectors.
                 </p>
               </div>
               <div>
@@ -88,7 +88,7 @@ export default function Home() {
               Ready to Learn More?
             </h2>
             <p className="text-xl mb-12">
-              Discover how Ares Commercial Real Estate Corporation can help you achieve your investment goals.
+              Discover how SZH Holdings can help you achieve your investment goals.
             </p>
             <a
               href="/contact"

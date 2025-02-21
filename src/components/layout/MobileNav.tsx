@@ -109,15 +109,15 @@ const MobileNav = ({ isOpen, onClose, navItems, investmentItems }: MobileNavProp
         {/* Secondary Navigation */}
         <div className="space-y-4">
           <Link
-            href="/about-ares-management"
+            href="/about-szh-holdings"
             className="block w-full px-3 py-2.5 text-center text-[14px] font-medium text-white bg-accent-blue hover:bg-primary rounded-md transition-all duration-300"
             onClick={onClose}
           >
-            ABOUT ARES MANAGEMENT
+            ABOUT SZH HOLDINGS
           </Link>
           
           <Link
-            href="mailto:contact@arescre.com"
+            href="mailto:contact@szhholdings.com"
             className="flex items-center justify-center gap-2 px-3 py-2.5 text-[14px] text-gray-600 hover:text-primary transition-colors duration-200"
             onClick={onClose}
           >

@@ -5,7 +5,12 @@ import { useTheme } from '@/contexts/ThemeContext';
 import Tooltip from './Tooltip';
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
+
+  // Don't render anything until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Tooltip content={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>

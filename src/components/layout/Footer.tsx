@@ -87,11 +87,11 @@ const Footer = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                  Ares Commercial
+                  SZH Holdings
                 </h3>
                 <p className="mt-4 text-gray-400 leading-relaxed">
-                  Focused on directly originating and managing a diversified portfolio of
-                  commercial real estate debt-related investments.
+                  A leading investment firm focused on managing a diversified portfolio of
+                  strategic investments across multiple sectors.
                 </p>
               </div>
               
@@ -191,7 +191,7 @@ const Footer = () => {
           
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Ares Commercial Real Estate Corporation.
+              © {new Date().getFullYear()} SZH Holdings.
               <span className="block md:inline md:ml-1">All rights reserved.</span>
             </p>
             <div className="flex items-center space-x-8 text-sm">

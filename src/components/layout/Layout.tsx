@@ -17,8 +17,15 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      {!isHomePage && <Breadcrumbs />}
-      <main className="flex-grow">{children}</main>
+      {/* Add margin-top to account for fixed header height (h-20 + top-bar h-8) */}
+      <div className="mt-28">
+        {!isHomePage && (
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs />
+          </div>
+        )}
+        <main>{children}</main>
+      </div>
       <Footer />
     </div>
   );
